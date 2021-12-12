@@ -93,7 +93,7 @@ header {
               color: $color-dark-grayish;
               font-weight: 400;
               display: block;
-              padding: 5px 0;
+              padding: 10px 0;
             }
             a:hover {
               text-decoration: none;
@@ -322,6 +322,7 @@ footer {
   }
 }
 
+.nav-close,
 .nav-open {
   display: none;
 }
@@ -374,15 +375,80 @@ footer {
       header {
         padding-top: 55px;
         nav {
+          display: block;
+          background-color: #fff;
+          border-radius: 5px;
+          position: absolute;
+          top: 125px;
+          left: 0;
+          right: 0;
+          width: 325px;
+          margin: auto;
+          padding: 20px;
+          transition: 0.3s;
           display: none;
+          .navbar-nav {
+            padding-bottom: 15px;
+            border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+            > li {
+              text-align: center;
+              display: block;
+              > a {
+                display: block;
+                color: $color-dark-grayish;
+                padding: 20px 0;
+              }
+              > a:hover {
+                text-decoration: none;
+              }
+              > a::after {
+                background-image: url(../../images/icon-arrow-dark.svg);
+              }
+              .sub-nav {
+                position: static;
+                width: 100%;
+                display: block;
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.1);
+              }
+            }
+          }
+          .button-nav {
+            text-align: center;
+            li {
+              display: block;
+              a {
+                display: inline-block;
+                color: $color-dark-grayish;
+                padding: 30px 0;
+              }
+              a:hover {
+                text-decoration: none;
+              }
+            }
+            li:last-child a {
+              margin: 0;
+              color: #fff;
+              padding: 15px 40px;
+              background: linear-gradient(
+                125deg,
+                hsl(13, 100%, 72%),
+                hsl(353, 100%, 62%)
+              );
+            }
+          }
         }
         .nav-btn-group {
-          .nav-open {
+          .nav-open,
+          .nav-close {
             padding: 0;
             background: transparent;
             border: 0;
             cursor: pointer;
             margin-left: auto;
+            margin-top: 4px;
+          }
+          .nav-open {
             display: block;
             margin-top: 8px;
           }
@@ -434,7 +500,7 @@ footer {
       text-align: center;
       .img-infustructure {
         max-width: 100%;
-        transform: none ;
+        transform: none;
         margin-top: -170px;
       }
       h3 {

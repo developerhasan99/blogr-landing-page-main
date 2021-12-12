@@ -12,3 +12,20 @@ for (let i = 0; i < linksLength; i++) {
     subMenus[i].classList.add("active");
   });
 }
+
+//Mobile nav Scripts
+var navOpener = document.getElementsByClassName("nav-open")[0];
+var navCloser = document.getElementsByClassName("nav-close")[0];
+var navBar = document.getElementById("navbar");
+
+navOpener.addEventListener("click", () => {
+  navOpener.style.display = "none";
+  navCloser.style.display = "block";
+  navBar.style.display = "block";
+});
+
+navCloser.addEventListener("click", () => {
+  navCloser.style.display = "none";
+  navOpener.style.display = "block";
+  navBar.style.display = "none";
+});

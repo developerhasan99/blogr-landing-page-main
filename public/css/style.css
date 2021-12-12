@@ -107,7 +107,7 @@ header nav .navbar-nav > li .sub-nav li a {
   color: #4b5862;
   font-weight: 400;
   display: block;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 header nav .navbar-nav > li .sub-nav li a:hover {
@@ -361,6 +361,7 @@ footer .footer-links li a:hover {
   text-decoration: underline;
 }
 
+.nav-close,
 .nav-open {
   display: none;
 }
@@ -421,14 +422,77 @@ footer .footer-links li a:hover {
     padding-top: 55px;
   }
   #hero .bg-overlay header nav {
+    display: block;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    width: 325px;
+    margin: auto;
+    padding: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     display: none;
   }
-  #hero .bg-overlay header .nav-btn-group .nav-open {
+  #hero .bg-overlay header nav .navbar-nav {
+    padding-bottom: 15px;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+  }
+  #hero .bg-overlay header nav .navbar-nav > li {
+    text-align: center;
+    display: block;
+  }
+  #hero .bg-overlay header nav .navbar-nav > li > a {
+    display: block;
+    color: #4b5862;
+    padding: 20px 0;
+  }
+  #hero .bg-overlay header nav .navbar-nav > li > a:hover {
+    text-decoration: none;
+  }
+  #hero .bg-overlay header nav .navbar-nav > li > a::after {
+    background-image: url(../../images/icon-arrow-dark.svg);
+  }
+  #hero .bg-overlay header nav .navbar-nav > li .sub-nav {
+    position: static;
+    width: 100%;
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #hero .bg-overlay header nav .button-nav {
+    text-align: center;
+  }
+  #hero .bg-overlay header nav .button-nav li {
+    display: block;
+  }
+  #hero .bg-overlay header nav .button-nav li a {
+    display: inline-block;
+    color: #4b5862;
+    padding: 30px 0;
+  }
+  #hero .bg-overlay header nav .button-nav li a:hover {
+    text-decoration: none;
+  }
+  #hero .bg-overlay header nav .button-nav li:last-child a {
+    margin: 0;
+    color: #fff;
+    padding: 15px 40px;
+    background: linear-gradient(125deg, #ff8f70, #ff3d54);
+  }
+  #hero .bg-overlay header .nav-btn-group .nav-open,
+  #hero .bg-overlay header .nav-btn-group .nav-close {
     padding: 0;
     background: transparent;
     border: 0;
     cursor: pointer;
     margin-left: auto;
+    margin-top: 4px;
+  }
+  #hero .bg-overlay header .nav-btn-group .nav-open {
     display: block;
     margin-top: 8px;
   }
