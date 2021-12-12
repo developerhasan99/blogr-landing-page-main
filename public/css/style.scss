@@ -228,7 +228,7 @@ header {
     line-height: 1.7;
   }
 }
-.img-desktop-editor {
+.img-mobile-editor {
   display: none;
 }
 
@@ -242,6 +242,7 @@ header {
     background-repeat: no-repeat;
     background-position: -215px -510px;
     height: 400px;
+    border-top-right-radius: 100px;
     .img-infustructure {
       transform: translate(-35px, -70px);
     }
@@ -321,6 +322,10 @@ footer {
   }
 }
 
+.nav-open {
+  display: none;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -357,5 +362,108 @@ footer {
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    .bg-overlay {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      header {
+        padding-top: 55px;
+        nav {
+          display: none;
+        }
+        .nav-btn-group {
+          .nav-open {
+            padding: 0;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            margin-left: auto;
+            display: block;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .hero-contents {
+      padding-top: 85px;
+      h1 {
+        font-size: 37px;
+      }
+      p {
+        margin-bottom: 47px;
+      }
+    }
+  }
+  #future {
+    padding-top: 104px;
+    padding-bottom: 232px;
+    overflow: hidden;
+    .section-title {
+      font-size: 26px;
+      letter-spacing: -0.1px;
+    }
+    .row {
+      flex-direction: column-reverse;
+      .img-mobile-editor {
+        display: block;
+        max-width: 100%;
+        transform: scale(1.175);
+        margin-top: -8px;
+      }
+      .section-small-title {
+        text-align: center;
+        margin-top: 74px;
+        font-size: 29px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  #infustructure {
+    height: 625px;
+    .bg-overlay {
+      background-position: -300px -580px;
+      text-align: center;
+      .img-infustructure {
+        max-width: 100%;
+        transform: none ;
+        margin-top: -170px;
+      }
+      h3 {
+        margin-top: 30px;
+      }
+    }
+  }
+  #open {
+    overflow-x: hidden;
+    background-image: none;
+    padding-top: 115px;
+    text-align: center;
+    padding-bottom: 0;
+    .open-laptop-mobile-img {
+      display: block;
+      max-width: 100%;
+      transform: scale(1.45);
+    }
+    h3 {
+      margin-top: 94px;
+    }
+  }
+  footer {
+    h4 {
+      margin-top: 30px;
+    }
+    text-align: center;
+    .footer-logo {
+      margin-bottom: 40px;
+    }
   }
 }
